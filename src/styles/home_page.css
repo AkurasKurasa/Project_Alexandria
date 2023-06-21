@@ -1,0 +1,975 @@
+@import url('/src/styles/global_variables.css');
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+html {height: auto;}
+body {min-height: 100vh; overflow-y: scroll;}
+
+:root {
+
+--bookWidth: 200px; /* 200px 165px  132px*/
+--bookHeight: 300px; /* 300px 250px 200px*/
+
+}
+
+/* 
+ _____ _                           _           _____      _               
+|  ___| |                         | |         /  ___|    | |              
+| |__ | | ___ _ __ ___   ___ _ __ | |_ ___    \ `--.  ___| |_ _   _ _ __  
+|  __|| |/ _ \ '_ ` _ \ / _ \ '_ \| __/ __|    `--. \/ _ \ __| | | | '_ \ 
+| |___| |  __/ | | | | |  __/ | | | |_\__ \   /\__/ /  __/ |_| |_| | |_) |
+\____/|_|\___|_| |_| |_|\___|_| |_|\__|___/   \____/ \___|\__|\__,_| .__/ 
+                                                                   | |    
+                                                                   |_|                                                                          
+*/
+
+
+
+
+div {
+
+    overflow: none;
+    text-decoration: none;
+
+}
+
+button {
+
+    white-space: nowrap;
+
+    border-radius: 0 0 0 0;
+    border-style: none;
+
+}
+
+nav {
+
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 50px;
+
+    background-color: rgb(93, 23, 23);
+
+    z-index: 110;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: all 1s ease-in-out;
+
+}
+
+a {
+
+    color: white;
+    text-decoration: none;
+
+}
+
+a:visited {
+
+    color: white;
+
+}
+
+/* —————————————————————————————————————————————— */
+
+
+
+/* 
+ _   _   _     _   _   _   _                _____ _                         
+| | | | | |   (_) | | (_) | |              /  __ \ |                        
+| | | | | |_   _  | |  _  | |_   _   _     | /  \/ | __ _ ___ ___  ___  ___ 
+| | | | | __| | | | | | | | __| | | | |    | |   | |/ _` / __/ __|/ _ \/ __|
+| |_| | | |_  | | | | | | | |_  | |_| |    | \__/\ | (_| \__ \__ \  __/\__ \
+ \___/   \__| |_| |_| |_|  \__|  \__, |     \____/_|\__,_|___/___/\___||___/
+                                  __/ |                                     
+                                 |___/                                                                          
+*/
+
+
+
+.test-border {border: 1px #000000 solid;}
+.gray-bg {background-color: gray;}
+.margin-none {margin: 0;}
+.padding-none {padding: 0;}
+
+/* —————————————————————————————————————————————— */
+
+
+/*
+______                     _                             _   
+| ___ \                   | |                           | |  
+| |_/ /_ _  __ _  ___     | |     __ _ _   _  ___  _   _| |_ 
+|  __/ _` |/ _` |/ _ \    | |    / _` | | | |/ _ \| | | | __|
+| | | (_| | (_| |  __/    | |___| (_| | |_| | (_) | |_| | |_ 
+\_|  \__,_|\__, |\___|    \_____/\__,_|\__, |\___/ \__,_|\__|
+            __/ |                       __/ |                
+           |___/                       |___/                 
+*/
+
+.pageView {
+
+    display: grid;
+    grid-template-rows: max(30vh, 25px) max(20vh, 50px) auto /*max(100vh, 300px)*/;
+
+    height: 100%;
+
+}
+
+#banner {
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 5rem;
+
+    background: url("/assets/images/alexandria.png");
+    background-size: cover;
+    background-position: bottom;
+
+    box-shadow: inset 0px 0px 5px 15px black;
+
+}
+
+#yourLibraryContainer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: sticky;
+    top: 0px;
+
+    background-color: var(--white);
+
+    border: 3px black solid;
+
+}
+
+#library {
+
+    background-color: var(--white);
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+    padding: 5%;
+
+}
+
+/* content inside above elements which must be loaded */
+
+#projectAlexandria {
+
+    color: gold;
+    
+    font-family: var(--tiltPrism);
+    font-weight: bold;
+    font-size: clamp(2rem, max(6vw, 6vh), 90px);
+
+    /* text-shadow: 8px 3px 5px black; */
+    
+    text-shadow: -10px -5px 1px black;
+
+
+    white-space: nowrap;
+
+}
+
+#yourLibrary {
+
+    font-family: var(--bebasNeue);
+    font-size: clamp(1.5rem, max(5.5vh, 5.5vw), 100px);
+
+}
+
+
+/* 
+______             _    
+| ___ \           | |   
+| |_/ / ___   ___ | | __
+| ___ \/ _ \ / _ \| |/ /
+| |_/ / (_) | (_) |   < 
+\____/ \___/ \___/|_|\_\
+
+*/
+/* .book for books which will appear in our library div */
+
+@media screen and (min-width: 0px) and (max-width: 650px) {
+    
+:root {
+
+    --bookWidth: 140px;
+    --bookHeight: 210px
+
+}
+
+}
+
+@media screen and (min-width: 651px) and (max-width: 1000px) {
+
+    :root {
+    
+        --bookWidth: 165px;
+        --bookHeight: 250px
+    
+    }
+    
+    }
+
+.book {
+
+    border: 1px black solid;
+
+    border-left: 30px black double;
+
+    /* min-width: 100px;
+    min-height: 150px; */
+
+    /* width: min(200px, 20vw); */
+    /* height: min(300px, 47vh); */
+
+    width: var(--bookWidth);
+    height: var(--bookHeight);
+
+    display: grid;
+    grid-template-rows: 40% 30% 10%;
+    justify-items: center;
+    gap: 5%;
+
+    transition: all 1.5s;
+
+}
+
+/* prominent part of the books */
+
+.book > h1 {
+
+    margin: 1rem 0;
+
+    padding: 0.5rem;
+
+    width: 80%;
+
+    /* min-height: 50px; */
+
+    font-family: var(--bebasNeue);
+    font-size: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow-wrap: break-word;
+    overflow: scroll;
+
+    text-align: center;
+
+    background-color: lemonchiffon;
+
+    border: 1px black solid;
+    border-radius: 7px;
+
+}
+
+.info {
+
+    display: none;
+    flex-direction: column;
+
+    white-space: nowrap;
+
+    width: 80%;
+
+    /* min-height: 60px; */
+    /* height: max-content; */
+
+    padding: 0.5rem;
+
+    font-family: var(--plexMono);
+
+    overflow: hidden;
+
+    background-color: white;
+
+    /* border: 1px black solid; */
+
+}
+
+.button-wrapper {
+
+    display: none;
+    flex-direction: row;
+    column-gap: 1rem;
+
+    width: 89%;
+
+    height: fit-content;
+
+    padding: 0.5rem;
+
+}
+
+.delete {
+
+    /* border: 1px black solid; */
+
+    top: 260px;
+    left: 11px;
+
+    width: 35px;
+    height: 35px;
+
+    content: url('/assets/icons/book-close.png');
+
+    transition: all 0.3s;
+
+}
+
+.delete:hover {
+
+
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+}
+
+.edit {
+
+    /* border: 1px black solid; */
+
+    top: 260px;
+    left: 44px;
+
+    width: 35px;
+    height: 35px;
+
+    content: url('/assets/icons/book-edit.png');
+
+    transition: all 0.3s;
+
+}
+
+.edit:hover {
+
+
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+}
+
+/*
+
+ _   _             _             _   _              ______            
+| \ | |           (_)           | | (_)             | ___ \           
+|  \| | __ ___   ___  __ _  __ _| |_ _  ___  _ __   | |_/ / __ _ _ __ 
+| . ` |/ _` \ \ / / |/ _` |/ _` | __| |/ _ \| '_ \  | ___ \/ _` | '__|
+| |\  | (_| |\ V /| | (_| | (_| | |_| | (_) | | | | | |_/ / (_| | |   
+\_| \_/\__,_| \_/ |_|\__, |\__,_|\__|_|\___/|_| |_| \____/ \__,_|_|   
+                      __/ |                                           
+                     |___/                                            
+*/
+
+.nav-links {
+
+    color: white;
+    
+    font-family: var(--workSans);
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 8px 3px 5px black;
+
+}
+
+.nav-links:hover {
+
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+
+}
+
+.navigation-flex-container {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: auto;
+
+    height: 100%;
+    
+}
+
+.navigation-flex-container[navigation] {
+
+    gap: 1rem;
+
+    margin-left: max(6vw, 2rem);
+    margin-right: 1rem;
+    column-gap: clamp(1rem, 2rem, 3vw);
+
+}
+
+.navigation-flex-container[authentication] {
+
+    gap: 0;
+
+    margin-left: 1rem;
+    margin-right: 4vw; /*4rem 2vw*/
+
+}
+
+/*
+                   _             _   _               _                  
+                  (_)           | | (_)             | |               _ 
+ _ __   __ ___   ___  __ _  __ _| |_ _  ___  _ __   | |__   __ _ _ __(_)
+| '_ \ / _` \ \ / / |/ _` |/ _` | __| |/ _ \| '_ \  | '_ \ / _` | '__|  
+| | | | (_| |\ V /| | (_| | (_| | |_| | (_) | | | | | |_) | (_| | |   _ 
+|_| |_|\__,_| \_/ |_|\__, |\__,_|\__|_|\___/|_| |_| |_.__/ \__,_|_|  (_)
+                      __/ |                                             
+                     |___/                                              
+ _                            _               _   
+| |                          | |             | |  
+| | ___   __ _  __ _  ___  __| |   ___  _   _| |_ 
+| |/ _ \ / _` |/ _` |/ _ \/ _` |  / _ \| | | | __|
+| | (_) | (_| | (_| |  __/ (_| | | (_) | |_| | |_ 
+|_|\___/ \__, |\__, |\___|\__,_|  \___/ \__,_|\__|
+          __/ | __/ |                             
+         |___/ |___/                              
+*/
+
+.authentications_loggedOut {
+
+    /* display: none;
+    padding: 0.3rem min(1.5rem, 2vw);
+
+    border: 1px black solid;
+    border-radius: 15px;
+    
+    text-transform: uppercase;
+    font-weight: bold; */
+
+    display: none;
+    padding: 0.3rem min(1.5rem, 2vw);
+
+    text-transform: uppercase;
+    font-weight: bold;
+
+    height: 100%;
+
+}
+
+.authentications_loggedOut[signup] {
+
+    /* background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+    background-size: 200%;
+    color: white;
+    box-shadow: 3px 3px 1px 1px inset rgb(10, 68, 68);
+    transition: all 0.5s; */
+
+    background-color: rgb(93, 23, 23);
+    color: white;
+    transition: all 0.5s;
+
+    font-family: var(--workSans);
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 8px 3px 5px black;
+
+}
+
+.authentications_loggedOut[signup]:hover {
+
+    /* outline: 3px solid black;
+    box-shadow: -3px -3px 1px 1px inset rgb(10, 68, 68);
+    background-position: right center; */
+
+    cursor: pointer;
+
+    transform: translate(5%,-5%);
+
+    border: 1px black solid;
+
+    box-shadow: -7px 1px lightgray;
+
+}
+
+.authentications_loggedOut[login] {
+
+    /* background-image: linear-gradient(to right, #834d9b 0%, #d04ed6  51%, #834d9b  100%);
+    background-size: 250% auto;
+    box-shadow: 3px 3px 1px 1px inset #ab50a8;
+    transition: all 0.5s; */
+
+    background-color: rgb(93, 23, 23);
+    color: white;
+    transition: all 0.5s;
+
+    font-family: var(--workSans);
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 8px 3px 5px black;
+
+}
+
+.authentications_loggedOut[login]:hover {
+
+    /* outline: 3px solid white;
+    box-shadow: -3px -3px 1px 1px inset #ab50a8;
+    background-position: right center; */
+
+    cursor: pointer;
+    transform: translate(5%,-5%);
+
+    border: 1px black solid;
+
+    box-shadow: -7px 1px lightgray;
+
+}
+
+/*
+                   _             _   _               _                  
+                  (_)           | | (_)             | |               _ 
+ _ __   __ ___   ___  __ _  __ _| |_ _  ___  _ __   | |__   __ _ _ __(_)
+| '_ \ / _` \ \ / / |/ _` |/ _` | __| |/ _ \| '_ \  | '_ \ / _` | '__|  
+| | | | (_| |\ V /| | (_| | (_| | |_| | (_) | | | | | |_) | (_| | |   _ 
+|_| |_|\__,_| \_/ |_|\__, |\__,_|\__|_|\___/|_| |_| |_.__/ \__,_|_|  (_)
+                      __/ |                                             
+                     |___/                                              
+ _                            _   _       
+| |                          | | (_)      
+| | ___   __ _  __ _  ___  __| |  _ _ __  
+| |/ _ \ / _` |/ _` |/ _ \/ _` | | | '_ \ 
+| | (_) | (_| | (_| |  __/ (_| | | | | | |
+|_|\___/ \__, |\__, |\___|\__,_| |_|_| |_|
+          __/ | __/ |                     
+         |___/ |___/                      
+*/
+
+.authentications_loggedIn {
+
+    display: none;
+    padding: 0.3rem min(1.5rem, 2vw);
+
+    /* border-radius: 15px; */
+    
+    text-transform: uppercase;
+    font-weight: bold;
+
+    height: 100%;
+
+}
+
+.authentications_loggedIn[logout] {
+
+    /* background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%);
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 3px 3px 1px 1px inset #691b09;
+    transition: all 0.5s; */
+
+    background-color: rgb(93, 23, 23);
+    color: white;
+    transition: all 0.5s;
+
+    font-family: var(--workSans);
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 8px 3px 5px black;
+             
+}
+
+.authentications_loggedIn[logout]:hover {
+
+    /* outline: 3px solid white;
+    box-shadow: -3px -3px 1px 1px inset #691b09;
+    background-position: right center; */
+
+    cursor: pointer;
+    transform: translate(5%,-5%);
+
+    border: 1px black solid;
+
+    box-shadow: -7px 1px lightgray;
+}
+
+
+/*
+
+___  ___          _       _     
+|  \/  |         | |     | |    
+| .  . | ___   __| | __ _| |___ 
+| |\/| |/ _ \ / _` |/ _` | / __|
+| |  | | (_) | (_| | (_| | \__ \
+\_|  |_/\___/ \__,_|\__,_|_|___/
+                                
+*/
+
+
+
+.authentication-pop-up[signup] {display: none;}
+.authentication-pop-up[login] {display: none;}
+
+
+.authentication-pop-up {
+
+    width: 350px;
+    height: 500px;
+    
+    position: fixed;
+    top: calc(50% - 250px);
+    right: calc(50% - 175px);
+    
+    border-radius: 5px 5px 5px 5px;
+
+    box-shadow: 1px 1px 2px 2px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 1rem;
+
+    background-color: whitesmoke;
+
+    z-index: 115;
+
+
+}
+
+.authentication-pop-up > h1 {
+
+    font-family: var(--gasoekOne);
+    font-weight: normal;
+    font-size: 1.7rem;
+    
+    text-transform: uppercase;
+
+    letter-spacing: 0.2rem;
+
+}
+
+.authentication-pop-up > button[signup] {
+
+    height: 10%;
+    width: 80%;
+
+    border-radius: 30px 30px 30px 30px;
+
+    font-family: var(--workSans);
+    font-weight: bolder;
+    font-size: 1.2rem;
+
+    text-transform: uppercase;
+    
+    letter-spacing: 0.1rem;
+
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+    background-size: 200%;
+    
+    color: white;
+
+    border: 1px black solid;
+
+    transition: all 0.5s;
+
+}
+
+
+.authentication-pop-up > button[login] {
+
+    height: 10%;
+    width: 80%;
+
+    border-radius: 30px 30px 30px 30px;
+
+    font-family: var(--workSans);
+    font-weight: bolder;
+    font-size: 1.2rem;
+
+    text-transform: uppercase;
+    
+    letter-spacing: 0.1rem;
+
+    background-image: linear-gradient(to right, #834d9b 0%, #d04ed6  51%, #834d9b  100%);
+    background-size: 200% auto;
+    
+    color: white;
+
+    border: 1px black solid;
+
+    transition: all 0.3s;
+    
+
+}
+
+.authentication-pop-up > button:hover {
+             
+    background-position: right center; /* change the direction of the change here */
+    
+    color: #fff;
+    
+    text-decoration: none;
+    
+    cursor: pointer;
+
+    font-size: 1.3rem;
+     
+}
+
+.close_button {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 50px;
+    width: 50px;
+
+    margin: 0.8rem;
+
+    border: 0px black solid;
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.close_button:hover {
+
+    cursor: pointer;
+
+}
+
+.close_button > img {
+
+    content: url('/assets/icons/close.png');
+
+}
+
+
+.form-authentication {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+
+}
+
+.form-authentication > * {
+
+    margin: 0.8rem;
+
+}
+
+.form-authentication > input { 
+    outline: none;
+    
+    border: none;
+    border-bottom: 2px gray solid;
+    
+    background-color: transparent;
+    
+    padding: 0.5rem;
+
+    font-size: 0.9rem;
+}
+
+.form-authentication > input::placeholder { 
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.2rem;
+
+}
+
+.ratingContainer {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.ratingContainer > img {
+
+    content: url('/assets/icons/star.png');
+
+    width: 30px;
+    height: 30px;
+
+}
+
+.ratingContainer > img:hover {
+
+    cursor: pointer;
+
+}
+
+#updateInput {
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    padding: 2rem;
+    margin: 1rem;
+
+    width: max(46.25vw, 400px); /* 600px */
+    height: max(70vh, 400px); /*650px*/
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+
+}
+
+
+#updateInput > input,  #updateInput > div[pageCountDivider], #updateInput > select {
+
+    height: fit-content;
+    width: 90%;
+
+    padding: 0.2rem;
+
+}
+
+#updateInput > h1 {
+
+    font-family: var(--bebasNeue);
+    font-size: 3rem;
+    white-space: nowrap;
+    text-align: center;
+
+    margin: 0.5rem;
+
+}
+
+#updateInput > div[pageCountDivider] {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+
+}
+
+#updateInput > div[pageCountDivider] > input {
+
+    width: 40%;
+    height: 100%;
+
+}
+
+#updateInput select {
+
+    border-radius: 0 0 0 0;
+    border: none;
+
+}
+
+#updateInput input {
+
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 3px;
+
+    padding: 0.2rem;
+
+
+    transition: padding 0.1s ease-in, font-size 1s;
+
+}
+
+#updateInput input::placeholder {
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1rem;
+
+    font-family: var(--workSans);
+
+}
+
+#updateInput input:focus {
+
+    padding: 0.5rem;
+
+    font-size: 1rem;
+
+}
+
+#updateInput > button {
+
+    height: 10%;
+    width: 50%;
+    
+    color: white;
+
+    font-family: var(--workSans);
+    font-size: 1.3rem;
+    font-weight: bolder;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1rem;
+
+    outline: none;
+    border: none;
+
+    border-radius: 100px 100px 100px 100px;
+
+    background-image: linear-gradient(to right, #00bf8f 0%, #001510  51%, #00bf8f  100%);
+    background-size: 200% auto;
+
+    transition: all 0.3s;
+
+}
+
+#updateInput > button:hover {
+
+    background-position: right center; /* change the direction of the change here */
+
+}

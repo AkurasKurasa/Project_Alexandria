@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/search_page.css">
+    <title>Project Alexandria</title>
+</head>
+<body>
+
+    <nav class="">
+
+        <div class="navigation-flex-container" navigation>
+            <a href="home.html" class="nav-links">Home</a>
+            <a href="search.html" class="nav-links">Search</a>
+        </div>
+
+        <div class="navigation-flex-container" authentication>
+            <button id="signUpButton" class="authentications_loggedOut" signup>Sign Up</button>
+            <button id="logInButton" class="authentications_loggedOut" login>Log In</button>
+            <button id="logOutButton" class="authentications_loggedIn" logout>Log Out</button>
+        </div>
+
+    </nav>
+    
+    <main>
+
+        <div class="test-border searchAndCustom">
+
+            <div class="generic-flex">
+                <h1 id="searchForABook">Search for a book</h1>
+
+                <input id="searchBar" type="text">
+
+                <div class="result_wrapper">
+
+                </div>
+
+            </div>
+            
+            <form action="" class="test-border" id="customInput">
+
+                <h1>Custom Input</h1>
+
+                <input type="text" placeholder="Book Name" id="customTitle">
+                
+                <input type="text" placeholder="Author" id="customAuthor">
+
+                <div pageCountDivider>
+                    <input type="text" placeholder="Pages Read" id="read">
+                    <input type="text" placeholder="Total Pages" id="pages">
+                </div>
+
+                <select type="text" placeholder="Status" id="customStatus">
+
+                    <option value="Reading">Reading</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Paused">Paused</option>
+                    <option value="Dropped">Dropped</option>
+                    <option value="Planning">Planning</option>
+
+                </select>
+
+                <div class="ratingContainer">
+                    <img id="star1" src="" alt="">
+                    <img id="star2" src="" alt="">
+                    <img id="star3" src="" alt="">
+                    <img id="star4" src="" alt="">
+                    <img id="star5" src="" alt="">
+                </div>
+
+                <button id="customAdd">Enter</button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <section id="signUpPop" class="authentication-pop-up" signup>
+        <h1>Create Account</h1>
+
+        <form id="signUpForm" class="form-authentication">
+            <input type="text" placeholder="Email" id="signUpEmail">
+            <input type="password" placeholder="Password" id="signUpPassword">
+        </form>
+
+        <button signup id="signUp">Sign Up</button>
+
+        <div class="close_button"><img src="" alt=""></div>
+    </section>
+
+    <section id="logInPop" class="authentication-pop-up" login>
+        <h1>Enter Account</h1>
+
+        <form id="logInForm" class="form-authentication">
+            <input type="text" placeholder="Email" id="logInEmail">
+            <input type="password" placeholder="Password" id="logInPassword">
+        </form>
+
+        <button login id="logIn">Log In</button>
+
+        <div class="close_button"><img src="" alt=""></div>
+    </section>
+
+    <script src="search.bundled.js"></script>
+
+</body>
+</html>

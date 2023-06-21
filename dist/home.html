@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/home_page.css">
+    <title>Project Alexandria</title>
+</head>
+<body>
+    <nav class="">
+
+        <div class="navigation-flex-container" navigation>
+            <a href="home.html" class="nav-links">Home</a>
+            <a href="search.html" class="nav-links">Search</a>
+        </div>
+
+        <div class="navigation-flex-container" authentication>
+            <button id="signUpButton" class="authentications_loggedOut" signup>Sign Up</button>
+            <button id="logInButton" class="authentications_loggedOut" login>Log In</button>
+            <button id="logOutButton" class="authentications_loggedIn" logout>Log Out</button>
+        </div>
+
+    </nav>
+
+    <main class="pageView">
+        
+        <header id="banner" class="">
+            <span id="projectAlexandria" class="">Project Alexandria</span>
+        </header>
+
+        <div id="yourLibraryContainer" class="">
+            
+            <span id="yourLibrary">Your Library</span>
+
+        </div>
+
+        <div id="library" class="">
+
+        </div>
+
+    </main>
+
+    <!-- home_pop-ups.css-->
+    <section style="position: relative; z-index: 1;">
+        <form action="" class="test-border" id="updateInput">
+
+            <h1>Update Input</h1>
+
+            <input type="text" placeholder="Book Name" id="bookTitle">
+            
+            <input type="text" placeholder="Author" id="bookAuthor">
+
+            <div pageCountDivider>
+                <input type="text" placeholder="Pages Read" id="pagesRead">
+                <input type="text" placeholder="Total Pages" id="pages">
+            </div>
+
+            <select type="text" placeholder="Status" id="bookStatus">
+
+                <option value="Reading">Reading</option>
+                <option value="Completed">Completed</option>
+                <option value="Paused">Paused</option>
+                <option value="Dropped">Dropped</option>
+                <option value="Planning">Planning</option>
+
+            </select>
+
+            <div class="ratingContainer">
+                <img id="star1Update" src="" alt="">
+                <img id="star2Update" src="" alt="">
+                <img id="star3Update" src="" alt="">
+                <img id="star4Update" src="" alt="">
+                <img id="star5Update" src="" alt="">
+            </div>
+
+            <button id="updateButton">Update</button>
+
+            <div class="close_button"><img src="" alt=""></div>
+
+        </form>
+
+    </section>
+
+
+    <section id="signUpPop" class="authentication-pop-up" signup>
+        <h1>Create Account</h1>
+
+        <form id="signUpForm" class="form-authentication">
+            <input type="text" placeholder="Email" id="signUpEmail">
+            <input type="password" placeholder="Password" id="signUpPassword">
+        </form>
+
+        <button signup id="signUp">Sign Up</button>
+
+        <div class="close_button"><img src="" alt=""></div>
+    </section>
+
+    <section id="logInPop" class="authentication-pop-up" login>
+        <h1>Enter Account</h1>
+
+        <form id="logInForm" class="form-authentication">
+            <input type="text" placeholder="Email" id="logInEmail">
+            <input type="password" placeholder="Password" id="logInPassword">
+        </form>
+
+        <button login id="logIn">Log In</button>
+
+        <div class="close_button"><img src="" alt=""></div>
+    </section>
+
+    <script src="home.bundled.js" type="module"></script>
+</body>
+</html>

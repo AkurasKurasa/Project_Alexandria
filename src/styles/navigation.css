@@ -1,0 +1,162 @@
+/* ELEMENTS */
+
+nav {
+
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 50px;
+
+    background-color: rgb(93, 23, 23);
+
+    z-index: 150;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: all 1s ease-in-out;
+
+}
+
+a {
+
+    color: white;
+    text-decoration: none;
+
+}
+
+a:visited {
+
+    color: white;
+
+}
+
+a.nav-links:hover {
+
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+
+}
+
+/* CLASSES */
+
+.nav-links {
+
+    color: white;
+    
+    font-family: var(--workSans);
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 8px 3px 5px black;
+
+}
+
+.authentications_loggedOut {
+
+    display: none;
+    padding: 0.3rem min(1.5rem, 2vw);
+
+    border: 1px black solid;
+    border-radius: 15px;
+    
+    text-transform: uppercase;
+    font-weight: bold;
+
+
+}
+
+.authentications_loggedOut[signup] {
+
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+    background-size: 200%;
+    color: white;
+    box-shadow: 3px 3px 1px 1px inset rgb(10, 68, 68);
+    transition: all 0.5s;
+
+}
+
+.authentications_loggedOut[signup]:hover {
+
+    outline: 3px solid black;
+    box-shadow: -3px -3px 1px 1px inset rgb(10, 68, 68);
+    background-position: right center;
+
+}
+
+.authentications_loggedOut[login] {
+
+    background-image: linear-gradient(to right, #834d9b 0%, #d04ed6  51%, #834d9b  100%);
+    background-size: 250% auto;
+    box-shadow: 3px 3px 1px 1px inset #ab50a8;
+    transition: all 0.5s;
+
+}
+
+.authentications_loggedOut[login]:hover {
+
+    outline: 3px solid white;
+    box-shadow: -3px -3px 1px 1px inset #ab50a8;
+    background-position: right center;
+
+
+}
+
+.authentications_loggedIn {
+
+    display: none;
+    padding: 0.3rem min(1.5rem, 2vw);
+
+    border: 2px black solid;
+    border-radius: 15px;
+    
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.authentications_loggedIn[logout] {
+
+    background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%);
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 3px 3px 1px 1px inset #691b09;
+    transition: all 0.5s;
+             
+}
+
+.authentications_loggedIn[logout]:hover {
+
+    outline: 3px solid white;
+    box-shadow: -3px -3px 1px 1px inset #691b09;
+    background-position: right center;
+}
+
+.flex-invisible-container {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    width: auto
+    
+}
+
+.flex-invisible-container[navigation] {
+
+    margin-left: max(6vw, 2rem);
+    margin-right: 1rem;
+    column-gap: clamp(1rem, 2rem, 3vw);
+
+}
+
+.flex-invisible-container[authentication] {
+
+    margin-left: 1rem;
+    margin-right: 4rem;
+
+}
