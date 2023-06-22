@@ -1,4 +1,4 @@
-@import url('/src/styles/global_variables.css');
+@import url('src/styles/global_variables.css');
 
 * {
 
@@ -133,7 +133,7 @@ ______                     _                             _
 
     padding: 5rem;
 
-    background: url("/assets/images/alexandria.png");
+    background: url("assets/images/alexandria.png");
     background-size: cover;
     background-position: bottom;
 
