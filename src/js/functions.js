@@ -1,6 +1,19 @@
 import { db } from "./firebase.config.js"
 import { CURRENT_USER } from "./authentication.js"
-import { updateInput } from "./events.js"
+
+const loggedInUI = document.querySelectorAll('.authentications_loggedOut')
+const loggedOutUI = document.querySelectorAll('.authentications_loggedIn')
+
+export const setUI = (user) => {
+
+    if (user) {
+    loggedInUI.forEach(item => item.style.display = "none")
+    loggedOutUI.forEach(item => item.style.display = "block")
+    } else {
+    loggedInUI.forEach(item => item.style.display = "block")
+    loggedOutUI.forEach(item => item.style.display = "none")
+    }
+}
 
 export async function setData(user) {
 
@@ -151,7 +164,7 @@ function __createDeleteButton(data) {
 
         db.collection('users')
         .doc(CURRENT_USER.uid).collection('data')
-        .where('title', '==', data.data()['title'])
+        .where('id', '==', data.data()['id'])
         .get()
         .then(snapshot => {snapshot.forEach(doc => doc.ref.delete())})
 
@@ -160,6 +173,8 @@ function __createDeleteButton(data) {
     return deleteButton;
 
 }
+
+const updateInput = document.querySelector('#updateInput')
 
 function __createEditButton(data) {
 
@@ -197,12 +212,6 @@ function __createEditButton(data) {
             }))})
             
             updateInput.style.display = 'none'
-
-            // document.querySelector('#star1Update').content = "url('/assets/icons/star.png')"
-            // document.querySelector('#star2Update').content = "url('/assets/icons/star.png')"
-            // document.querySelector('#star3Update').content = "url('/assets/icons/star.png')"
-            // document.querySelector('#star4Update').content = "url('/assets/icons/star.png')"
-            // document.querySelector('#star5Update').content = "url('/assets/icons/star.png')"
 
         })
     })

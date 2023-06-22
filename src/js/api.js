@@ -1,5 +1,7 @@
 import { db } from './firebase.config.js'
 import { CURRENT_USER } from './authentication.js'
+let randomstring = require('randomstring')
+
 
 // https://www.googleapis.com/books/v1/volumes?q=${eve.target.value}t&key=AIzaSyD_kkx-KG5rWVyayJbDISTX2fzILT6QtU8&maxResults=5
 
@@ -54,7 +56,8 @@ searchBar.addEventListener('keyup', (eve) => {
                     author: x[i]['author'],
                     pages: x[i]['pages'],
                     read: 0,
-                    rating: 0
+                    rating: 0,
+                    id: randomstring.generate()
 
                 })
                 
@@ -153,7 +156,9 @@ customInput['customAdd'].addEventListener('click', (e) => {
         read : customInput['read'].value,
         pages : customInput['pages'].value,
         status : customInput['customStatus'].value,
-        rating : `${rating}`
+        rating : `${rating}`,
+        id: randomstring.generate()
+
     })
 
     customInput.reset()

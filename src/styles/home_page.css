@@ -310,6 +310,17 @@ ______             _
 
 }
 
+.info > h6 {
+
+    border: 1px black solid;
+    text-overflow: ellipsis;
+    text-align: center;
+    overflow: hidden;
+
+    padding: 0.1rem;
+
+}
+
 .button-wrapper {
 
     display: none;
@@ -857,6 +868,10 @@ ___  ___          _       _
     transform: translate(-50%, -50%);
 
     background-color: white;
+
+    border-radius: 5px 5px 5px 5px;
+
+    box-shadow: 1px 1px 3px 3px;
 
 }
 
