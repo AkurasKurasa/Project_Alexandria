@@ -83,11 +83,11 @@ let rating = 0
 
 star1.addEventListener('click', () => {
 
-    star1.style.content = "url('/assets/icons/yellow_star.png')"
-    star2.style.content = "url('/assets/icons/star.png')"
-    star3.style.content = "url('/assets/icons/star.png')"
-    star4.style.content = "url('/assets/icons/star.png')"
-    star5.style.content = "url('/assets/icons/star.png')"
+    star1.style.content = "url('assets/icons/yellow_star.png')"
+    star2.style.content = "url('assets/icons/star.png')"
+    star3.style.content = "url('assets/icons/star.png')"
+    star4.style.content = "url('assets/icons/star.png')"
+    star5.style.content = "url('assets/icons/star.png')"
 
     rating = 1
 
@@ -95,11 +95,11 @@ star1.addEventListener('click', () => {
 
 star2.addEventListener('click', () => {
 
-    star1.style.content = "url('/assets/icons/yellow_star.png')"
-    star2.style.content = "url('/assets/icons/yellow_star.png')"
-    star3.style.content = "url('/assets/icons/star.png')"
-    star4.style.content = "url('/assets/icons/star.png')"
-    star5.style.content = "url('/assets/icons/star.png')"
+    star1.style.content = "url('assets/icons/yellow_star.png')"
+    star2.style.content = "url('assets/icons/yellow_star.png')"
+    star3.style.content = "url('assets/icons/star.png')"
+    star4.style.content = "url('assets/icons/star.png')"
+    star5.style.content = "url('assets/icons/star.png')"
 
     rating = 2
 
@@ -107,11 +107,11 @@ star2.addEventListener('click', () => {
 
 star3.addEventListener('click', () => {
 
-    star1.style.content = "url('/assets/icons/yellow_star.png')"
-    star2.style.content = "url('/assets/icons/yellow_star.png')"
-    star3.style.content = "url('/assets/icons/yellow_star.png')"
-    star4.style.content = "url('/assets/icons/star.png')"
-    star5.style.content = "url('/assets/icons/star.png')"
+    star1.style.content = "url('assets/icons/yellow_star.png')"
+    star2.style.content = "url('assets/icons/yellow_star.png')"
+    star3.style.content = "url('assets/icons/yellow_star.png')"
+    star4.style.content = "url('assets/icons/star.png')"
+    star5.style.content = "url('assets/icons/star.png')"
 
     rating = 3
 
@@ -131,11 +131,11 @@ star4.addEventListener('click', () => {
 
 star5.addEventListener('click', () => {
 
-    star1.style.content = "url('/assets/icons/yellow_star.png')"
-    star2.style.content = "url('/assets/icons/yellow_star.png')"
-    star3.style.content = "url('/assets/icons/yellow_star.png')"
-    star4.style.content = "url('/assets/icons/yellow_star.png')"
-    star5.style.content = "url('/assets/icons/yellow_star.png')"
+    star1.style.content = "url('assets/icons/yellow_star.png')"
+    star2.style.content = "url('assets/icons/yellow_star.png')"
+    star3.style.content = "url('assets/icons/yellow_star.png')"
+    star4.style.content = "url('assets/icons/yellow_star.png')"
+    star5.style.content = "url('assets/icons/yellow_star.png')"
 
     rating = 5
 
@@ -163,11 +163,11 @@ customInput['customAdd'].addEventListener('click', (e) => {
 
     customInput.reset()
 
-    star1.style.content = "url('/assets/icons/star.png')"
-    star2.style.content = "url('/assets/icons/star.png')"
-    star3.style.content = "url('/assets/icons/star.png')"
-    star4.style.content = "url('/assets/icons/star.png')"
-    star5.style.content = "url('/assets/icons/star.png')"
+    star1.style.content = "url('assets/icons/star.png')"
+    star2.style.content = "url('assets/icons/star.png')"
+    star3.style.content = "url('assets/icons/star.png')"
+    star4.style.content = "url('assets/icons/star.png')"
+    star5.style.content = "url('assets/icons/star.png')"
 
     rating = 0
 
