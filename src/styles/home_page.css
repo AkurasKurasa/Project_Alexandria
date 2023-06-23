@@ -1,4 +1,4 @@
-@import url('src/styles/global_variables.css');
+@import url('/src/styles/global_variables.css');
 
 * {
 
@@ -132,8 +132,7 @@ ______                     _                             _
     gap: 1rem;
 
     padding: 5rem;
-
-    background: url("assets/images/alexandria.png");
+    background: url("../../assets/images/alexandria.png");
     background-size: cover;
     background-position: bottom;
 
@@ -345,7 +344,7 @@ ______             _
     width: 35px;
     height: 35px;
 
-    content: url('assets/icons/book-close.png');
+    content: url('../../assets/icons/book-close.png');
 
     transition: all 0.3s;
 
@@ -371,7 +370,7 @@ ______             _
     width: 35px;
     height: 35px;
 
-    content: url('assets/icons/book-edit.png');
+    content: url('../../assets/icons/book-edit.png');
 
     transition: all 0.3s;
 
@@ -779,7 +778,7 @@ ___  ___          _       _
 
 .close_button > img {
 
-    content: url('assets/icons/close.png');
+    content: url('../../assets/icons/close.png');
 
 }
 
@@ -833,7 +832,7 @@ ___  ___          _       _
 
 .ratingContainer > img {
 
-    content: url('assets/icons/star.png');
+    content: url('../../assets/icons/star.png');
 
     width: 30px;
     height: 30px;
