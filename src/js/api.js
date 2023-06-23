@@ -119,11 +119,11 @@ star3.addEventListener('click', () => {
 
 star4.addEventListener('click', () => {
 
-    star1.style.content = "url('/assets/icons/yellow_star.png')"
-    star2.style.content = "url('/assets/icons/yellow_star.png')"
-    star3.style.content = "url('/assets/icons/yellow_star.png')"
-    star4.style.content = "url('/assets/icons/yellow_star.png')"
-    star5.style.content = "url('/assets/icons/star.png')"
+    star1.style.content = "url('assets/icons/yellow_star.png')"
+    star2.style.content = "url('assets/icons/yellow_star.png')"
+    star3.style.content = "url('assets/icons/yellow_star.png')"
+    star4.style.content = "url('assets/icons/yellow_star.png')"
+    star5.style.content = "url('assets/icons/star.png')"
 
     rating = 4
 
