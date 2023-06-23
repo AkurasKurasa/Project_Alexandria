@@ -231,11 +231,11 @@ function __editButtonEvents() {
 
     star1Update.addEventListener('click', () => {
 
-        star1Update.style.content = "url('../../assets/icons/yellow_star.png')"
-        star2Update.style.content = "url('../../assets/icons/star.png')"
-        star3Update.style.content = "url('../../assets/icons/star.png')"
-        star4Update.style.content = "url('../../assets/icons/star.png')"
-        star5Update.style.content = "url('../../assets/icons/star.png')"
+        star1Update.style.content = "url('../assets/icons/yellow_star.png')"
+        star2Update.style.content = "url('../assets/icons/star.png')"
+        star3Update.style.content = "url('../assets/icons/star.png')"
+        star4Update.style.content = "url('../assets/icons/star.png')"
+        star5Update.style.content = "url('../assets/icons/star.png')"
 
         __ratingUpdate = 1
 
