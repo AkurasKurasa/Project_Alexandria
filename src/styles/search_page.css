@@ -633,7 +633,7 @@ nav {
 
 .ratingContainer > img {
 
-    content: url('assets/icons/star.png');
+    content: url('../../assets/icons/star.png');
 
     width: 30px;
     height: 30px;
@@ -797,7 +797,7 @@ ___  ___          _       _
 
 .close_button > img {
 
-    content: url('assets/icons/close.png');
+    content: url('../../assets/icons/close.png');
 
 }
 
@@ -851,7 +851,7 @@ ___  ___          _       _
 
 .ratingContainer > img {
 
-    content: url('assets/icons/star.png');
+    content: url('../../assets/icons/star.png');
 
     width: 30px;
     height: 30px;

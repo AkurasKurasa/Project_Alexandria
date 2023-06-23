@@ -231,11 +231,11 @@ function __editButtonEvents() {
 
     star1Update.addEventListener('click', () => {
 
-        star1Update.style.content = "url('assets/icons/yellow_star.png')"
-        star2Update.style.content = "url('assets/icons/star.png')"
-        star3Update.style.content = "url('assets/icons/star.png')"
-        star4Update.style.content = "url('assets/icons/star.png')"
-        star5Update.style.content = "url('assets/icons/star.png')"
+        star1Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star2Update.style.content = "url('../../assets/icons/star.png')"
+        star3Update.style.content = "url('../../assets/icons/star.png')"
+        star4Update.style.content = "url('../../assets/icons/star.png')"
+        star5Update.style.content = "url('../../assets/icons/star.png')"
 
         __ratingUpdate = 1
 
@@ -243,11 +243,11 @@ function __editButtonEvents() {
 
     star2Update.addEventListener('click', () => {
 
-        star1Update.style.content = "url('assets/icons/yellow_star.png')"
-        star2Update.style.content = "url('assets/icons/yellow_star.png')"
-        star3Update.style.content = "url('assets/icons/star.png')"
-        star4Update.style.content = "url('assets/icons/star.png')"
-        star5Update.style.content = "url('assets/icons/star.png')"
+        star1Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star2Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star3Update.style.content = "url('../../assets/icons/star.png')"
+        star4Update.style.content = "url('../../assets/icons/star.png')"
+        star5Update.style.content = "url('../../assets/icons/star.png')"
 
         __ratingUpdate = 2
 
@@ -255,11 +255,11 @@ function __editButtonEvents() {
 
     star3Update.addEventListener('click', () => {
 
-        star1Update.style.content = "url('assets/icons/yellow_star.png')"
-        star2Update.style.content = "url('assets/icons/yellow_star.png')"
-        star3Update.style.content = "url('assets/icons/yellow_star.png')"
-        star4Update.style.content = "url('assets/icons/star.png')"
-        star5Update.style.content = "url('assets/icons/star.png')"
+        star1Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star2Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star3Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star4Update.style.content = "url('../../assets/icons/star.png')"
+        star5Update.style.content = "url('../../assets/icons/star.png')"
 
         __ratingUpdate = 3
 
@@ -267,11 +267,11 @@ function __editButtonEvents() {
 
     star4Update.addEventListener('click', () => {
 
-        star1Update.style.content = "url('assets/icons/yellow_star.png')"
-        star2Update.style.content = "url('assets/icons/yellow_star.png')"
-        star3Update.style.content = "url('assets/icons/yellow_star.png')"
-        star4Update.style.content = "url('assets/icons/yellow_star.png')"
-        star5Update.style.content = "url('assets/icons/star.png')"
+        star1Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star2Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star3Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star4Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star5Update.style.content = "url('../../assets/icons/star.png')"
 
         __ratingUpdate = 4
 
@@ -279,11 +279,11 @@ function __editButtonEvents() {
 
     star5Update.addEventListener('click', () => {
 
-        star1Update.style.content = "url('assets/icons/yellow_star.png')"
-        star2Update.style.content = "url('assets/icons/yellow_star.png')"
-        star3Update.style.content = "url('assets/icons/yellow_star.png')"
-        star4Update.style.content = "url('assets/icons/yellow_star.png')"
-        star5Update.style.content = "url('assets/icons/yellow_star.png')"
+        star1Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star2Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star3Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star4Update.style.content = "url('../../assets/icons/yellow_star.png')"
+        star5Update.style.content = "url('../../assets/icons/yellow_star.png')"
 
         __ratingUpdate = 5
 
